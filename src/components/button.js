@@ -17,24 +17,14 @@ import axios from 'axios'
 export const Button = (props) => {
 const dataWitchAlertPRoveider = useContext(Context)
 const  checkFirebase = async() =>{
-    // await axios.get('https://cosmolist-cc46f-default-rtdb.europe-west1.firebasedatabase.app')
-    //     .then((resp) => {
-    //         console.log(resp)
-    //     })
-        const res = await axios.post(`https://cosmolist-cc46f-default-rtdb.europe-west1.firebasedatabase.app`,'valueBustard')
-    console.log('res')
+    console.log('data')
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:3002')
 }
         return(
             <button param  type="submit" onClick={(e)=>{
-                    event.preventDefault();
+                e.preventDefault()
                     checkFirebase()
-                    if(props.valInp){
-                        if(props.valInp.trim()){
-                            dataWitchAlertPRoveider.show('Заметка успешно введена')
-                        }
-                    }else{
-                        dataWitchAlertPRoveider.show('Нетуть текста')
-                    }
                 }
             }>+</button>
         )
