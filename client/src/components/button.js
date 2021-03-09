@@ -15,16 +15,21 @@ import axios from 'axios'
 
 
 export const Button = (props) => {
+    console.log('button')
+    async function  bla(){
+        let response =  await fetch('/');
+        if(response.ok){
+        console.log('ress is ok')
+    }
+    }
+
+    bla()
 const dataWitchAlertPRoveider = useContext(Context)
-const  checkFirebase = async() =>{
-    console.log('data')
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:3002')
-}
+
         return(
-            <button param  type="submit" onClick={(e)=>{
+            <button   type="submit" onClick={(e)=>{
                 e.preventDefault()
-                    checkFirebase()
+                    bla()
                 }
             }>+</button>
         )

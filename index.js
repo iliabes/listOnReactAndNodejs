@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
  
 const urlencodedParser = bodyParser.urlencoded({extended: false});
 
-// app.use(express.static(__dirname + "/build"));
+app.use(express.static(__dirname));
  
 app.get("/reg", function (request, response) {
     console.log('this is pozt')
@@ -13,9 +13,9 @@ app.get("/reg", function (request, response) {
 
 app.get("/", function(request, response){
     console.log('work')
-    response.sendFile(__dirname + '/build/index.html')
+    response.sendFile(__dirname + "/TEST.HTML")
 });
 
 
  
-app.listen(3002,console.log('server is starting'));
+app.listen(3001,console.log('server is starting'));
